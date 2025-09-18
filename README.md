@@ -1,14 +1,42 @@
-# React + Vite
+This project is a **full-stack chatbot** that answers queries over a news corpus using a **Retrieval-Augmented Generation (RAG)** pipeline with the **Google Gemini API**.  
+It was built as part of an assignment for the **Full Stack Developer role at Voosh**.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## ✨ Features
+- Ingests ~50 news articles (RSS feed or scraped HTML)
+- Embeds text using Jina Embeddings (or other open-source embeddings)
+- Stores embeddings in a vector database (Chroma, Qdrant, or FAISS)
+- Retrieves top-k results and generates answers with **Gemini API**
+- Session-based chat:
+  - New session for each user
+  - Chat history stored in Redis
+  - Reset session option
+- Frontend with **React + SCSS**
+- Backend with **Node.js (Express) + Redis**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Features
+- Simple chat screen with messages
+- Input box to send queries
+- Reset session button
+- Clean SCSS styling
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# news_bot_frontend
-# news_bot_frontend
+---
+
+## Tech Stack
+- React
+- SCSS
+- Axios (for API calls)
+
+---
+
+## Setup Instructions
+
+1. Clone the repo
+```bash
+git clone https://github.com/your-username/frontend-rag-chatbot.git
+cd frontend-rag-chatbot
+npm install
+npm start
